@@ -1,0 +1,73 @@
+//@import './custom-styles.scss';
+
+// variables
+
+$ball-size: 15px !default;
+$margin: 2px !default;
+$line-height: 35px !default;
+$line-width: 4px !default;
+
+// functions
+
+@function delay($interval, $count, $index) {
+  @return ($index * $interval) - ($interval * $count);
+}
+
+// mixins
+
+@mixin global-bg() {
+  background-color: $accent;
+}
+
+@mixin global-animation() {
+  animation-fill-mode: both;
+}
+
+@mixin balls() {
+  @include global-bg();
+
+  width: $ball-size;
+  height: $ball-size;
+  border-radius: 100%;
+  margin: $margin;
+}
+
+@mixin lines() {
+  @include global-bg();
+
+  width: $line-width;
+  height: $line-height;
+  border-radius: 2px;
+  margin: $margin;
+}
+
+// animations
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ball-rotate {
+
+  > div {
+    @include balls();
+    @include global-animation();
+
+    border: 2px solid $accent;
+    border-bottom-color: transparent;
+    background: transparent !important;
+    display: inline-block;
+    animation: rotate 0.75s 0s linear infinite;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: -4px;
+  }
+}
