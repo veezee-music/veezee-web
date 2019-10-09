@@ -1,7 +1,7 @@
 # veezee-web
 
 <p align="center">
-	<img width="50%" src="http://veezee.cloud/demo_assets/web/p1.png">
+	<img width="50%" src="https://veezee-music.github.io/veezee-static-contents/brand/web/p1.png">
 </p>
 <br>
 
