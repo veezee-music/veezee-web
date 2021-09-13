@@ -7,8 +7,6 @@
 
 Web version of veezee. A Progressive Web Application made with Vue.js (ES6) and Bootstrap 4.
 
-A demo is available at [web.veezee.cloud](https://web.veezee.cloud).
-
 ## Features
 - Written in JavaScript ES6 without using any transpliers such as Babel
 - Bootstrap 4 (Flexible layout)
